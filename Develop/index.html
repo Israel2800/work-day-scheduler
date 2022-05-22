@@ -4,35 +4,163 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
+
+     <!--Font Icons-->
+     <script src="https://kit.fontawesome.com/51e99565ca.js"></script>
+
+     <!--jQuery CDN-->
+     <script
+       src="https://code.jquery.com/jquery-3.4.1.js"
+       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+       crossorigin="anonymous"
+     ></script>
+
+     <!-- Moment.js-->
+     <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+     
+     <!--Bootstrap CDN-->
+     <link
+       rel="stylesheet"
+       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+       crossorigin="anonymous"
+     />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
   <body>
     <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
+      <h1 class="display-3"> Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+     <!-- Date and time Display that is gonna go below header  -->
+    <section>
+      <div class="container text-center">
+        <h1 id="date"></h1>
+        <h1 id="time"></h1>
+      </div>
+    </section>
+
+      <!-- Timeblocks go here -->
+      <section id="schedule">
+        <div class="container">
+          <!-- 9 AM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>9:00 AM</p>
+              </div>
+              <textarea class="hourNotes" id="09AM" rows="2"></textarea>
+              <button class="saveBtn" id="09AMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 10 AM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>10:00 AM</p>
+              </div>
+              <textarea class="hourNotes" id="10AM" rows="2"></textarea>
+              <button class="saveBtn" id="10AMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 11 AM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>11:00 AM</p>
+              </div>
+              <textarea class="hourNotes" id="11AM" rows="2"></textarea>
+              <button class="saveBtn" id="11AMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 12 PM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>12:00 PM</p>
+              </div>
+              <textarea class="hourNotes" id="12PM" rows="2"></textarea>
+              <button class="saveBtn" id="12PMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 1 PM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>1:00 PM</p>
+              </div>
+              <textarea class="hourNotes" id="01PM" rows="2"></textarea>
+              <button class="saveBtn" id="01PMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 2 PM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>2:00 PM</p>
+              </div>
+              <textarea class="hourNotes" id="02PM" rows="2"></textarea>
+              <button class="saveBtn" id="02PMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 3 PM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>3:00 PM</p>
+              </div>
+              <textarea class="hourNotes" id="03PM" rows="2"></textarea>
+              <button class="saveBtn" id="03PMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 4 PM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour">
+                <p>4:00 PM</p>
+              </div>
+              <textarea class="hourNotes" id="04PM" rows="2"></textarea>
+              <button class="saveBtn" id="04PMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+          <!-- 5 PM -->
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <div class="hour last-hour">
+                <p>5:00 PM</p>
+              </div>
+              <textarea
+                class="hourNotes last-hourNotes"
+                id="05PM"
+                rows="2"
+              ></textarea>
+              <button class="saveBtn" id="05PMsave">
+                <i class="far fa-save"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <script src="script.js"></script>
   </body>
 </html>
