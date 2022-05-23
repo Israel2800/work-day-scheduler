@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var currentDate = moment().format("MMMM Do, YYYY");
-    var currentTime = moment().format("hh:mm:ss A");
+    // var currentTime = moment().format("hh:mm:ss A"); Extra variable, if the user wants to see the current hour
     var currentHour;
     var possibleHours = {
         before: ["12AM", "01AM", "02AM", "03AM", "04AM", "05AM", "06AM", "07AM", "08AM"],
@@ -16,7 +16,7 @@ $(document).ready(function() {
         // Set colors based on current time
         timeColor();
         // Update current date and time every second
-        let currentTime = setInterval(function() {
+        let currentTimer = setInterval(function() {
             currentDate = moment().format("MMMM Do, YYYY");
             $("#date").text(currentDate);
             currentTime = moment().format("hh:mm:ss A");
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
     // Change text box/area to a specific color for past, present and future hours
     function timeColor() {
-        currentHour = momento().format("hhA");
+        currentHour = moment().format("hhA");
         // If currentHours is before 9am set all hours to background-color gray
         if (possibleHours.before.indexOf(currentHour) !==-1){
             $(".hourNotes").css("backgorund-color", "#d3d3d3");
@@ -95,7 +95,6 @@ $(".saveBtn").on("click", function(){
         case "05PMsave":
             textId = $("#05PM").val();
             localStorage.setItem("05PMtext", textId);
-            break;
     }
 });
 
