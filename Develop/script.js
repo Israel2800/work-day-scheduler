@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var currentDate = moment().format("MMMM Do, YYYY");
-    // var currentTime = moment().format("hh:mm:ss A"); Extra variable, if the user wants to see the current hour
+    var currentTime = moment().format("hh:mm:ss A"); // Extra variable, if the user wants to see the current hour
     var currentHour;
     var possibleHours = {
         before: ["12AM", "01AM", "02AM", "03AM", "04AM", "05AM", "06AM", "07AM", "08AM"],
@@ -12,15 +12,15 @@ $(document).ready(function() {
         // Display current date
         $("#date").text(currentDate);
         // Display current time
-        $("#time").text(currentTime);
+        // $("#time").text(currentTime);
         // Set colors based on current time
         timeColor();
         // Update current date and time every second
         let currentTimer = setInterval(function() {
             currentDate = moment().format("MMMM Do, YYYY");
             $("#date").text(currentDate);
-            currentTime = moment().format("hh:mm:ss A");
-            $("#time").text(currentTime);
+            // currentTime = moment().format("hh:mm:ss A");
+            // $("#time").text(currentTime);
             timeColor();
         }, 1000);
     }

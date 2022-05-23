@@ -8,13 +8,15 @@ body {
   text-align: center;
   background-color: transparent;
   color: black;
+  border-bottom: 8px solid black;
   border-radius: 0;
-  border-bottom: 10px solid black;
 }
 
 /* date/time container */
+
+
 #time {
-margin-bottom: 20px;
+margin-bottom: none;
 }
 /* time blocks */
 
@@ -49,11 +51,16 @@ margin-bottom: 20px;
 .saveBtn {
   box-sizing: border-box;
   width: 40px;
-  border: 1px solid #bbb;
+  border: 1px solid #1fbcd7;
   border-bottom: none;
-  background-color: #888;
+  background-color: rgb(92, 218, 240);
   border-radius: 0 10px 10px 0;
 }
+
+.saveBtn:hover {
+  background-color: #1fbcd7;
+}
+
 .fa-save {
   color: white;
 }
