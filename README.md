@@ -9,10 +9,10 @@ This website is build for all the users that needs to administrate their time du
 * JavaScript
 
 ## Website
-https://israel2800.github.io/work-day-scheduler-challenge/
+https://israel2800.github.io/work-day-scheduler/
 
 ## GitHub Repository
-https://github.com/Israel2800/work-day-scheduler-challenge
+https://github.com/Israel2800/work-day-scheduler
 
 ## Screenshots
 ![Screenshot of the web application at 11:00 am., with some examples.](images/screenshot-1.png)
